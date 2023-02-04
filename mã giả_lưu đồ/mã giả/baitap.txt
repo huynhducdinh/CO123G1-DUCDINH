@@ -1,6 +1,0 @@
-Begin
-   Input a b c
-        Tổng = a+b+c
-   Display
-    Trung bình cộng = Tổng / 3
-END

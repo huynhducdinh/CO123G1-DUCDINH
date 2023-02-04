@@ -1,6 +1,0 @@
-BEGIN
-  Input dola  
-       tienviet = dola * 23000d
-  display
-       230000dvn
-END 
