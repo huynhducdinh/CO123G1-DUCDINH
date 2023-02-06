@@ -5,14 +5,16 @@
     <title>Tao form don gian</title>
 </head>
 <body>
-<form>
+<!--tao form don gian-->
+<fieldset>
 <h1>SỞ THÍCH CỦA BẠN</h1>
-Họ vè tên
+<form action="tao form don gian" method="post">
+Họ và tên
 <input type="text" name="Họ và tên"/>
 <br>
 <br>
 Email
-<input type="text" name="Email"/>
+<input type="email" name="Email"/>
 <p style="color: red"</p>
     <input type="checkbox" name="The thao" value="on">Thể thao
     <input type="checkbox" name="Am nhac" value="on">Âm nhạc
@@ -25,15 +27,17 @@ Email
 <br>
 <input type="submit" name="Gửi Thông tin" value="Gửi thông tin"/>
 <input type="reset" name="Nhập lại" value="Nhập lại"/>
+</fieldset>
 <br>
 <br>
+<fieldset>
 <h1>ĐĂNG KÍ HỌC VIÊN</h1>
 Họ và tên
 <input type="text" name="Họ và tên"/>
 <br>
 <br>
 Ngày sinh
-<input type="text" name="Ngày sinh"/>
+<input type="gender" name="Ngày sinh"/>
 <br>
     <input type="hidden" name="Giới tính" value=" Giới tính"> Giới tính
     <input type="radio" name="subject" value="Nam"> Nam
@@ -57,11 +61,12 @@ Ngày sinh
         <br>
         <br>
         Điện thoại
-        <input type="text" name="Điện thoại"/>
+        <input type="text" name="Điện thoại"> <oninput="this.value = this.value.replace(/[^0-9.]/g, '')" autocomplete="off">
         <br>
         <br>
         <input type="submit" name="submit" value="Đăng ký"/>
         <input type="reset" name="reset" value="Nhập lại"/>
+</fieldset>
 </form>
 </body>
 </html>
