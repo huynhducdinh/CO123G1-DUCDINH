@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cu</title>
+</head>
+<body>
+<label for="so1">Điểm bài kiểm tra:</label>
+    <input type="number" min="0" max="10" id="so1" placeholder="nhập điểm tại đây"><br><br>
+<label for="so2">Điểm giữa kì:</label>
+<input type="number"  min="0" max="10" id="so2" placeholder="nhập điểm tại đây"><Br><Br>
+<label for="so3">Điểm cuối kì:</label>
+<input type="number" id="so3" placeholder="nhập điểm tại đây"><br><bR>
+<button onclick="ket_qua()">Điểm tổng</button>
+    <p id="Average"></p>
+</body>
+<script>
+    function ket_qua () {
+        let a = document.getElementById("so1").value;
+        let b = document.getElementById("so2").value;
+        let c = document.getElementById("so3").value;
+        let tong = ((Number(a) + Number(b) + Number(c))/3)
+        if (tong <5) {
+            reslut ="ban học sinh yếu";
+        }else if (tong <6 ){
+            reslut ="bạn học sinh trung bình";
+        }else if (tong <8) {
+            reslut ="bạn học sinh khá";
+        }else{
+            reslut ="bạn học sinh giỏi";
+        }
+        document.getElementById("Average").innerHTML="Tổng:" + tong +reslut;
+
+    }
+</script>
+</html>
