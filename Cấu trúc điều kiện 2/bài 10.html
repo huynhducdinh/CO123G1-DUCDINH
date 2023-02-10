@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giá tiền điện</title>
+</head>
+<body>
+<script>
+     let   dien1 = prompt("điện năng tiêu thụ(kWh).")
+     let tong
+     switch (dien1) {
+      case dien1 < 50:
+          tong = Mqi * 1.678
+             alert(" tiền thuế phải trả là" +tong +"VND");
+             break;
+        case dien1 < 100:
+            tong = dien1 * 1.734
+             alert("tiền điện phải trả là" +tong +"VND");
+            break;
+        case dien1 < 200:
+            tong = dien1 * 2.014
+             alert("tiền điện phải trả là " +tong +"VND");
+             break;
+        case dien1 < 300:
+            tong = dien1 * 2.536
+             alert("tiền điện phải trả là" +tong +"VND");
+             break;
+        case dien1 <400:
+            tong = dien1 * 2.834
+             alert("tiền điện phải trả là" +tong +"VND");
+             break;
+            default:
+                tong =dien1 *2927
+                alert("tiền điện phải trả là" +tong +"VND");
+     }
+</script>
+</body>
+</html>

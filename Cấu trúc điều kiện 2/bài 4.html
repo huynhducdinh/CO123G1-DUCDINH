@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>diện tích hình vuông</title>
+</head>
+<body>
+<label for="hi">chiều dài</label>
+<input type="number" id="hi" placeholder="nhập tại đây"><br>
+<br>
+<label for="hi5">chiều rộng</label>
+<input type="number" id="hi5" placeholder="nhập tại dây">
+<br>
+<Br>
+<button onclick="b()">kết quả</button>
+<p id="hi1"></p>
+</body>
+<script>
+    function b() {
+        let length = document.getElementById("hi").value;
+        let width = document.getElementById("hi5").value;
+        let acreage = (length * width) ;
+        document.getElementById("hi1").innerHTML="Diện tích:" +acreage +"cm2";
+    }
+</script>
+</html>

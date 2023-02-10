@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhạp tuổi</title>
+</head>
+<body>
+<label for="tuoi"><b>Nhập tuổi của bạn</b></label>
+<input type="number" id="tuoi" min="1" max="120" placeholder="nhập ở đây" style="width: 90px">
+<button onclick="ket_qua()">Enter</button>
+<p id="tuoi1"></p>
+</body>
+<script>
+    function ket_qua() {
+        let tuoi = document.getElementById("tuoi").value;
+
+        if (tuoi == parseInt(tuoi)) {
+            result = tuoi + " là tuổi của bạn";
+        } els
+            result = tuoi + "không phải là tuổi của bạn";
+        }
+    document.getElementById("tuoi1").innerHTML = result ;
+    }
+</script>
+</html

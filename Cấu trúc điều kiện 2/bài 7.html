@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 7</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập giá trị a");
+    let b = prompt("nhập giá trị b");
+    let c = prompt("nhập giá trị c");
+    let giaTri2 =( b*b -4 *a*c)
+    let giaTri3
+    let giaTri4
+     if (giaTri2 ==0){
+         giaTri3 = -b/(2*a)
+         giaTri4 =-b(2*a)
+        alert("phương trình có nghiệm kép");
+    }else  if (giaTri2 <0){
+         alert("phương trình vô nghiệm");
+     }else {
+         giaTri3 = (-b-Math.sqrt((giaTri2)))/(2*a);
+         giaTri4 =(-b+Math.sqrt((giaTri2)))/(2*a);
+         alert(" phương trình có 2 nghiệm")
+     }
+</script>
+</body>
+</html>

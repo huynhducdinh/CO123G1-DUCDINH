@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thue</title>
+</head>
+<body>
+<script>
+    let thuNhapCuaBan =prompt("nhập ở đây");
+     let bac1 = thuNhapCuaBan *0.05
+    let bac2 = thuNhapCuaBan *0.1 -250000
+    let bac3 = thuNhapCuaBan *0.15-750000
+    let bac4 = thuNhapCuaBan *0.2-1650000
+    let bac5 = thuNhapCuaBan *0.25-3250000
+    let bac6 = thuNhapCuaBan *0.3-5850000
+    let bac7 = thuNhapCuaBan *0.35 -9850000
+
+   if (thuNhapCuaBan>0 && thuNhapCuaBan <= 5000000) {
+       alert("thue cua ban la" + bac1 +"VND");
+   }else
+       if(5000000< thuNhapCuaBan && thuNhapCuaBan <=10000000) {
+       alert("thue cua ban la" +bac2 +"VND");
+   }else
+       if(10000000 < thuNhapCuaBan && thuNhapCuaBan <= 18000000) {
+       alert(" thue cua ban la" + bac3 +"VND");
+   }else
+       if(18000000 < thuNhapCuaBan && thuNhapCuaBan <=32000000) {
+       alert("thue cua ban la" + bac4 +"VND");
+   }else
+       if(32000000 < thuNhapCuaBan && thuNhapCuaBan <=52000000) {
+       alert("thue cua ban la" +bac5 +"VND");
+   }else
+       if(52000000 < thuNhapCuaBan && thuNhapCuaBan<=80000000) {
+       alert("thue cua ban la" +bac6 +"VND");
+   }else {
+       alert("thue cua ban la" +bac7 + "VND");
+   }
+</script>
+</body>
+</html>
