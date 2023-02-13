@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo web</title>
+</head>
+<style>
+    h1{
+        color: red;
+    }
+</style>
+<body>
+<h1>BẢNG CỬU CHƯƠNG</h1>
+</body>
+<script>
+    cuuChuong ="<table border ='2' width='200' cellapacing='4' cellpadding='4'>";
+    let x3;
+    let x4;
+
+    for (i =1; i <=10; i++) {
+        cuuChuong = cuuChuong + "<tr>";
+        heSo1 = 2 * i;
+        heSo2 = 3 * i;
+        heSo3 = 4 * i;
+        heSo4 = 5 * i;
+        heSo5 = 6 * i;
+        heSo6 = 7 * i;
+        heSo7 = 8 * i;
+        heSo8 = 9 * i;
+        cuuChuong = cuuChuong + "<td>" + "2x" + i + "=" + heSo1 +"</td>";
+        cuuChuong = cuuChuong + "<td>" + "3x" + i + "=" + heSo2 +"</td>";
+        cuuChuong = cuuChuong + "<td>" + "4x" + i + "=" + heSo3 +"</td>";
+        cuuChuong = cuuChuong + "<td>" + "5x" + i + "=" + heSo4 +"</td>";
+        cuuChuong = cuuChuong + "<td>" + "6x" + i + "=" + heSo5 +"</td>";
+        cuuChuong = cuuChuong + "<td>" + "7x" + i + "=" + heSo6 +"</td>";
+        cuuChuong = cuuChuong + "<td>" + "8x" + i + "=" + heSo7 +"</td>";
+        cuuChuong = cuuChuong + "<td>" + "9x" + i + "=" + heSo8 +"</td>";
+
+        cuuChuong = cuuChuong + "</tr>";
+    }
+    cuuChuong = cuuChuong + "</table>";
+        document.write(cuuChuong);
+
+</script>
+</html>
