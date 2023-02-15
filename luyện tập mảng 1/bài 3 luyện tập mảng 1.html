@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài3</title>
+</head>
+<body>
+ <script>
+     let arr = [1,2,3,6,5,9,8,5,6,6,5,10]
+     let max = arr[0]
+     let average;
+     let sum = 0;
+     for (let i = 1; i < arr.length; i++) {
+         sum = sum + arr[i];
+         if (max < arr[i]) {
+             max = arr[i]
+         }
+     }
+     average = sum/arr.length
+     document.write("giá trị lớn nhất là :" + max + "<br>");
+     document.write("trung bình cộng :" + average)
+
+ </script>
+</body>
+</html>

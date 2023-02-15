@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+<script>
+
+   let arrVie = ['chuối','ổi','xoài','táo','cam','điện thoại','bút'];
+   let arrEng = ['banana','guava','mango','apple','orange','phone','pen'];
+let tuKhoa =  window.prompt("hãy nhập của bạn vào đây");
+let indexEng =0;
+    let result='';
+    for (let i=0;i<arrEng.length;i++){
+        if(tuKhoa===arrEng[i]){
+            indexEng=i;
+            for (let j=0;j<arrVie.length;j++){
+                if(indexEng ===j){
+                    result=arrVie[j];
+                }
+            }
+        }
+    }
+    document.write(result);
+</script>
+</body>
+</html>

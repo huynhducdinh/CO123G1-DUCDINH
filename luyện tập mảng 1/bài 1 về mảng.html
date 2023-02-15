@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<script>
+
+    // bài 1
+    let myColor=["Red","Green","white","Black"];
+    document.write(myColor.join(","));
+    // bài 2
+    let arr= prompt("bạn hãy nhập dãy số vào đây");
+    let str= arr.toString();
+    let result=[str[0]];
+      for( i=1;i<str.length ;i++){
+          if((str[i-1]%2===0)&&(str[i]%2===0)){
+            result.push("-",str[i]);
+          }else{
+              result.push(str[i]);
+          }
+      }
+      document.write(result.join(""));
+   // num.toString()
+   //  bài 3
+   let str1 = prompt("nhập một câu vào trong này");
+   let giaTri ="ABCDEFGHJKMNOPQRSTUVWXYZ";
+   let giaTri1 ="abcdefhgkmonpostuvwxyz";
+    let result1=[]
+    for(let i =0;i<str1.length;i++){
+        if(giaTri.indexOf(str1[i]) !==-1){
+            result1.push(str1[i].toLowerCase());
+        }else if(giaTri1.indexOf(str1[i]) !==-1){
+            result1.push(str1[i].toUpperCase());
+        }else {
+            result1.push(str1[i]);
+        }
+    }
+    document.write(result1.join(""));
+</script>
+</body>
+</html>
