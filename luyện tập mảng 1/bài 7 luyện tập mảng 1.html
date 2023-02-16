@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 7</title>
+</head>
+<body>
+<script>
+    let arr=[1,2,3,4,5,6,7,8,9,10];
+    let v= +prompt('bạn hãy nhập 1 số từ 1 đến 10 vào đây');
+    let result ='';
+    for( let i=0;i<arr.length;i++){
+        if(v===arr[i]){
+        arr.push(0);
+            continue;
+        }else{
+            result=arr[i];
+        }
+        document.write( result +",");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 6, 8, 9, 4, 3, 5];
+    let a
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j <= arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                a = arr[i];
+                arr[i] = arr[j];
+                arr[j] = a;
+            }
+        }
+    }
+    document.write("Mang sap xep theo thu tu giam dan:" + arr);
+</script>
+</body>
+</html>
