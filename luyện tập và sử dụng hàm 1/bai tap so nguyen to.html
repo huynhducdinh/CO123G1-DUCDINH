@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so nguyen to</title>
+</head>
+<body>
+<script>
+
+    let count = 0;
+
+    function isPrime(number) {
+
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                count += 1;
+            }
+            if (count === 2) {
+                result = (number + "la so nguyen to");
+            } else {
+                result = (number + "khong la so nguyen to");
+            }
+        }
+
+        return result;
+    }
+
+    let number = +prompt("nhap so vao day");
+    isPrime(number);
+    document.write(result);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+
+</head>
+<body>
+<script>
+    let star =prompt("nhap ngoi sao vao day");
+    let star1=[ 'Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe','Regulus'];
+    let star2 =['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function checkStar() {
+        for (let i=0;i<star1.length;i++){
+            if (star===star1[i]){
+                alert(star2[i]);
+                return star2[i];
+            }
+            }
+        alert("khong tim thay ngoi sao");
+    }
+    checkStar();
+
+</script>
+</body>
+</html>

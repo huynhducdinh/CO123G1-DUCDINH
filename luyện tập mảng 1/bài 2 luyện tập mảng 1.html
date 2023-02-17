@@ -7,13 +7,12 @@
 <body>
 <script>
     let arr = [2, 5, 6, 1, 4, 8, 9, 2, 3, 10,];
-    let max = arr[0]
-    let index
+    let max = arr[0];
+    let index;
     for (let i = 1; i <= arr.length; i++) {
         if (max < arr[i]) {
-            max = arr[i]
-            index = i
-
+            max = arr[i];
+            index = i;
         }
     }
     document.write("gía trị lớn nhất:", max+"<br>");
