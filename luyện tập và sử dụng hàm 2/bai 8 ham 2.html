@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 8</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhap vao dayy");
+    let orgArr =str.split(",");
+    let newArr = [];
+    // let newArr = org_arr.slice().reverse(); // slice :sao y toàn bộ các phần tử vào mảng
+                                             // dum ham reverse de dao nguoc mang
+    function reverse() {
+        // newArr=orgArr.reverse();
+        for ( let i = orgArr.length - 1 ; i >=0; i--){
+            newArr.push(orgArr[i]);
+        }
+
+        document.write("mang cu la:" + orgArr + "<br>");
+        document.write("mang moi la:" + newArr);
+    }
+
+    reverse();
+</script>
+</body>
+</html>

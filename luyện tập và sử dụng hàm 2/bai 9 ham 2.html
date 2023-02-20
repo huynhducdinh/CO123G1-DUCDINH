@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 9</title>
+</head>
+<body>
+<script>
+    let arr = [1, 1, 2, 4, 6, 6, 7, 5, 'H', 'D', 'D', 'H'];
+    let anyChar = prompt("nhap ki tu vao dayy");
+    let appear = 0;
+    let arr1 = arr.join(",");
+
+    function countFrom() {
+        for (let i = 0; i < arr1.length; i++) {
+            if (anyChar == arr1[i]) {
+                appear++;
+            }
+        }
+        if (appear === 0) {
+            document.write("-1 ne");
+            return;
+        }
+        document.write('so lan' + ' ' + anyChar + ' ' + 'xuat hien ki tu trong chuoi la:' + appear);
+    }
+
+    countFrom();
+</script>
+</body>
+</html>

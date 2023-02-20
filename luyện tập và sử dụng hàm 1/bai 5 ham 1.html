@@ -10,7 +10,7 @@
     let star =prompt("nhap ngoi sao vao day");
     let star1=[ 'Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe','Regulus'];
     let star2 =['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
-    function checkStar() {
+    function checkStar(star) {
         for (let i=0;i<star1.length;i++){
             if (star===star1[i]){
                 alert(star2[i]);
@@ -19,7 +19,7 @@
             }
         alert("khong tim thay ngoi sao");
     }
-    checkStar();
+    checkStar(star);
 
 </script>
 </body>
