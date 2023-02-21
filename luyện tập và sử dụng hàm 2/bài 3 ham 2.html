@@ -6,16 +6,17 @@
 </head>
 <body>
 <script>
-    let arr =+prompt("nhap so vao dayy");
-     let sum =1;
-    function tinhGiaThua() {
-        for (let i=1;i<=arr;i++){
-            // sum *=i;
-            sum=sum*i;
+    let arr = +prompt("nhap so vao dayy");
+    let sum = 1;
+
+    function tinhGiaiThua() {
+        for (let i = 1; i <= arr; i++) {
+            sum = sum * i;
         }
-        document.write("ket qua la:"+sum);
+        document.write("ket qua la:" + sum);
     }
-    tinhGiaThua();
+
+    tinhGiaiThua();
 </script>
 </body>
 </html>

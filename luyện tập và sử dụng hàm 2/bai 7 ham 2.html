@@ -9,15 +9,15 @@
     let number = +prompt("nhap A vao dayy");
     let number1 = +prompt("nhap  B vo daay");
 
-    function convert() {
+    function convert(number, number1) {
         let number3 = number;
         number = number1;
         number1 = number3;
-        document.write("ket qua bi dao nguoc A la :" + number+"<br>");
+        document.write("ket qua bi dao nguoc A la :" + number + "<br>");
         document.write("ket qua bi dao nguoc B la :" + number1);
     }
 
-    convert();
+    convert(number, number1);
 </script>
 </body>
 </html>

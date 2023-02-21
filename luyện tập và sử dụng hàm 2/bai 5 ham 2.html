@@ -10,27 +10,21 @@
     let number1 = +prompt("nhap 2");
     let number2 = +prompt("nhap 3");
 
-    function soNguyen() {
-        // if (number==number1&&number1==number2){
-        //     document.write("A, B, C bang nhau");
-        //     return ;
-        // }
-        // document.write("số nguyên có giá trị nhỏ nhất trong ba so" + " " + a + "," + b + "," + c + "," + "la:");
-        // document.write(Math.min(a, b, c));
-        if (number == number1 && number1== c) {
+    function soNguyen(number, number1, number2) {
+        if (number === number1 && number1 === c) {
             document.write("ba so bang nhau");
             return;
         }
-        if (number<number1&&number<number2){
+        if (number < number1 && number < number2) {
             document.write("A la so nho nhat");
-        }else if (number1<number2){
+        } else if (number1 < number2) {
             document.write("B la so nho nhat");
-        }else {
+        } else {
             document.write("C la so nho nhat");
         }
     }
 
-    soNguyen();
+    soNguyen(number, number1, number2);
 </script>
 </body>
 </html>
