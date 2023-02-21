@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hinh chu nhat</title>
+</head>
+<body>
+<canvas id="Rectangle" width="100%" height="100%"></canvas>
+<button onclick="changeSize()">Chuyen hoa</button>
+<script>
+    class Rectangle {
+        length;
+        width;
+
+        constructor(length, width,) {
+            this.length = length;
+            this.width = width;
+        }
+
+        getLength() {
+            return this.length;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        setLength(length) {
+            this.length = length;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        getAcreage() {
+            return this.length * this.width;
+        }
+
+        getPerimeter() {
+            return (this.length + this.width) * 2;
+        }
+
+        drawCanvas() {
+            let canvas = document.getElementById("Rectangle");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#FF6699';
+            ctx.fillRect(10, 20, this.length, this.width);
+        }
+    }
+
+    let a = +prompt("nhap chieu dai vao dayy");
+    let b = +prompt("nhap chieu rong vao dayy");
+    let rectangle = new Rectangle(a, b);
+    rectangle.drawCanvas();
+    let length = rectangle.getLength();
+    let width = rectangle.getWidth();
+
+
+    document.write("<br>");
+    document.write(" chieu dai moi la:" + rectangle.getLength() + "cm");
+    document.write("<br>");
+    document.write(" chieu rong moi la:" + rectangle.getWidth() + "cm");
+    document.write("<br>");
+    document.write(" chu vi moi la:" + rectangle.getPerimeter() + "m");
+    document.write("<br>");
+    document.write(" dien tich moi la:" + rectangle.getAcreage() + "cm2");
+
+    function changeSize() {
+        let newLength = prompt("nhap chieu daii");
+        let newWidth = prompt("nhap chieu rongg");
+        rectangle.setLength(newLength);
+        rectangle.setWidth(newWidth);
+        rectangle.drawCanvas();
+    }
+
+
+</script>
+</body>
+</html>
