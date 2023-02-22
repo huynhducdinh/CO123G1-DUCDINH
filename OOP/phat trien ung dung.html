@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phat trien ung dung</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decreaseApple() {
+            if (this.isEmpty()) {
+                alert("tao da het roi nee");
+            } else {
+                this.weight--;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        isMale() {
+
+            if (this.gender == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getGender() {
+            if (this.isMale()) {
+                return "Male";
+            } else {
+                return "Female";
+            }
+        }
+
+        say(string) {
+            alert(string);
+        }
+
+        checkApple(apple) {
+            return apple.isEmpty();
+        }
+
+        eatApple(apple) {
+            if (apple.getWeight()) {
+                apple.decreaseApple();
+                this.weight++
+            } else {
+                alert("ht tron tao");
+            }
+        }
+
+        getInfo(human) {
+            alert(human.name + " " + human.weight + " " + human.getGender());
+        }
+    }
+
+    let adam = new Human("adam", 1, 66);
+    let eva = new Human("eva", 2, 55);
+    let apple1 = new Apple(10);
+
+    while (apple1.isEmpty() !== true) {
+        document.write("-Adam an to" + "<br>");
+        adam.eatApple(apple1);
+
+        document.write("-qua tao con" + "<br>");
+        document.write(apple1.getWeight() + "don vi" + "<br>");
+        document.write("-can nang cua adam:" + adam.getWeight() +" "+ "don vi" + "<br>")
+        document.write("<br>");
+        document.write("<br>");
+        document.write("-Eva an to" + "<br>");
+        eva.eatApple(apple1);
+
+        document.write("-qua tao con" +"<br>");
+        document.write(apple1.getWeight() + "don vi" + "<br>");
+        document.write("-can nang cua eva:" + eva.getWeight() +" "+ "don vi" + "<br>");
+    }
+</script>
+</body>
+</html>

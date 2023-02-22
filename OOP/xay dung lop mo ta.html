@@ -8,6 +8,9 @@
 <script>
     class Temperature {
         constructor(celsius) {
+            while (celsius < -273) {
+                celsius = prompt(" nhiet doi phai lon hon -273,xin moi nhap lại");
+            }
             this.celsius = celsius;
         }
 
@@ -28,7 +31,8 @@
         }
     }
 
-    let temperature = new Temperature(25);
+    let celsius = +prompt("xin moi nhap doC");
+    let temperature = new Temperature(celsius);
     temperature.getCelsius();
     document.write("DoF la:" + temperature.getFahrenheit());
     document.write("<br>");
