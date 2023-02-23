@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bong den</title>
+</head>
+<body>
+<script>
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(electricLamp) {
+            this.lamp = electricLamp;
+        }
+
+        getSwitchStatus() {
+            return this.switchStatus;
+        }
+
+        checkStatus() {
+            if (this.switchStatus === false) {
+                return 'Công tắc bật'
+            } else {
+                return 'Công tắc tắt';
+            }
+        }
+
+        switchOff() {
+            this.switchStatus = false;
+            this.lamp.turnOn();
+        }
+
+        switchOn() {
+            this.switchStatus = true;
+            this.lamp.turnOff();
+
+        }
+    }
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+        getStatus(){
+            return this.status;
+        }
+        turnOn() {
+            this.status = true;
+        }
+        turnOff(){
+            this.status =false;
+        }
+
+    }
+    let switchButton= new SwitchButton();
+    let electricLamp= new  ElectricLamp();
+    switchButton.connectToLamp(electricLamp);
+    for (let i = 0; i <10 ; i++) {
+        switchButton.switchOn();
+        document.write(switchButton.checkStatus()+"<br>");
+
+        switchButton.switchOff();
+        document.write(switchButton.checkStatus()+"<br>");
+    }
+
+</script>
+</body>
+</html>
