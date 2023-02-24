@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập có sô vào dây");
+    let arr = [];
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt(" nhập phần tử i vào mảng");
+
+    }
+    document.write("mảng dc them mới là" + arr);
+    for (let i = 0; i < n; i++) {
+        if (arr[i] % 2 === 0 && i % 2 !== 0) {
+            sum = sum + arr[i];
+        }
+    }
+    document.write(" tỏng các phân tử chăn ở vĩ trí le là:" + sum);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let n= prompt("các phần tử trong mang");
+    let arr=[];
+    let sum =0;
+    let temp =0;
+    for (let i = 0; i <n ; i++) {
+        arr[i]= +prompt("các phần tử i trong mảng");
+    }
+    document.write("các phần tử trong mảng là:"+arr+"<br>");
+    for (let i = 0; i < n; i++) {
+       if (arr[i]%2===0){
+           sum++
+       }else {
+           temp ++
+       }
+    }
+    if (sum ===temp){
+        document.write("ok");
+    }else {
+        document.write("no");
+    }
+
+</script>
+</body>
+</html>

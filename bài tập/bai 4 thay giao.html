@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhạp so vao đây");
+    let arr = [];
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập phần tử i vào đây");
+    }
+    document.write("các phần tử trong mảng là" + arr+"<br>");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== arr[arr.length - i - 1]) {
+            document.write("Khong đối xứng");
+            break;
+        } else {
+            sum++
+        }
+    }
+    if (sum === arr.length ) {
+        document.write("đối xứng")
+
+    }
+
+
+</script>
+</body>
+</html>

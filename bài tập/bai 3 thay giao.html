@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhạp phần tử vào đây");
+    let arr = [];
+    let sum = 0;
+    let sum1 = 0;
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập các gía trị i vào đây");
+    }
+    document.write("các phần tử trong mảng là" + arr + "<br>");
+
+    function checkNumber(arr) {
+        let ckkhoangcach = arr[0] - arr[1];
+        let ckkoangcach1 = arr[1] - arr[0];
+        for (let i = 0; i < arr.length - 1; i++) {
+            if (arr[i] - arr[i + 1] === ckkhoangcach) {
+                sum++;
+            }
+            if (arr[i] - arr[i + 1] === ckkoangcach1) {
+                sum1++;
+            }
+        }
+        if (sum === arr.length - 1 || sum1 === arr.length - 1) {
+            alert("true");
+        } else {
+            alert("flase");
+        }
+    }
+
+    checkNumber(arr);
+</script>
+</body>
+</html>
