@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+
+<body>
+<script>
+    let n = prompt("nhap chieu cao vao daay");
+    for (let i = 1; i <= n; i++) {
+        for (let k = n; k > i; k--) {
+            document.write("&nbsp&nbsp;");
+        }
+        for (let j = 1; j <= i * 2 - 1; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+
+</html>
