@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let option;
+    let soLuong;
+    let tong = 0;
+
+    alert(`
+            1. Cafe
+            2. Nước vắt
+            3. Nước ép cà rốt
+            4. Nước ép cà chua
+            5. Nước lọc
+            6.Nước dừa
+            7.Không mua nữa.thoát ra thôi
+        `);
+    do {
+        option = +prompt("moi ban chon lua mon");
+
+        switch (option) {
+            case 1:
+
+                soLuong = +prompt(" moi ban nhap so luong");
+                alert("ban da chon cafe voi gia" + (tong = 10 * soLuong) + "K");
+                break;
+            case 2:
+
+                soLuong = +prompt(" moi ban nhap so luong");
+                alert("ban da chon nuoc vat gia" + (tong = 15 * soLuong) + "K");
+
+                break;
+            case 3:
+
+                soLuong = +prompt(" moi ban nhap so luong");
+                alert("ban da chon nuoc ca rot gia" + (tong = 18 * soLuong) + "K");
+
+                break;
+            case 4:
+
+                soLuong = +prompt(" moi ban nhap so luong");
+                alert("ban da chon nuoc ca chua gia" + (tong = 20 * soLuong) + "K");
+
+                break;
+            case 5:
+
+                soLuong = +prompt(" moi ban nhap so luong");
+                alert("ban da chon nuoc loc gia" + (tong = 5 * soLuong) + "K");
+
+                break;
+            case 6:
+
+                soLuong = +prompt(" moi ban nhap so luong");
+                alert("ban da chon nuoc dua gia" + (tong = 25 * soLuong) + "K");
+                break;
+            case 7:
+                confirm("moi ban chon lai");
+                break;
+        }
+    } while (option != 7);
+
+
+</script>
+</body>
+</html>

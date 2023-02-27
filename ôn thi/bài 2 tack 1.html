@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập 1 ký tự vào đây");
+    if (input == 'a' || input == 'A' || input == 'e' || input == 'E' || input == 'i' || input == 'I' || input == 'o' || input == 'O' || input == 'u' || input == 'U') {
+        document.write(input +": là nguyên âm");
+    } else if ((input >= 'a' && input <= 'z') || (input >= 'A' && input <= 'Z')) {
+        document.write(input+":là phụ âm");
+    } else {
+        document.write("không nằm trong bảng chữ cái");
+    }
+
+</script>
+</body>
+</html>

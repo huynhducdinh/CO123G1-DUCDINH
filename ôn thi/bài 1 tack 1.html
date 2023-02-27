@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let tienLuong =+prompt("nhập tiền lương của bạn vào đây");
+    let thue;
+    let luongRong;
+    if (tienLuong>=15000000){
+       thue=tienLuong *0.2
+        luongRong=tienLuong-thue;
+        document.write("phầm trăm thuế:"+0.2+"<br>"+"thuế thu nhập của nhân viên là: "+ thue +"<br>"+"lương ròng của bạn là:"+luongRong);
+    }
+    else if (tienLuong>=7000000){
+           thue=tienLuong*0.1;
+        luongRong=tienLuong-thue;
+        document.write("phầm trăm thuế:"+0.1+"<br>"+"thuế thu nhập của nhân viên là: "+thue+"<br>"+"lương ròng của bạn là:"+luongRong);
+    }
+   else {
+        thue=tienLuong*0.05;
+        luongRong=tienLuong-thue;
+        document.write("phầm trăm thuế:"+0.05+"<br>"+"thuế thu nhập của nhân viên là: "+thue+"<br>"+"lương ròng của bạn là:"+luongRong);
+    }
+</script>
+</body>
+</html>

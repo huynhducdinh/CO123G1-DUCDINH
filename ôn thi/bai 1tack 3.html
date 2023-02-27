@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    let arr1=[]
+    let sum =0;
+    let n =+prompt("nhập chiều dài cảu mảng");
+    for (let i = 0; i <n ; i++) {
+        arr.push(+prompt("nhập i vào đây"));
+    }
+    for (let i = 0; i <n ; i++) {
+        sum +=arr[i];
+        arr1[i]=sum;
+    }
+    document.write("Mang a la: " + arr + "<br>" + "prefixSums la:" + arr1);
+</script>
+</body>
+</html>

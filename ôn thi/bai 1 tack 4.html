@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<script>
+    let arr = prompt("ban hay nhap nhieu ky tu");
+    let convert;
+    let result;
+    let arr1;
+
+
+    function display(arr) {
+        convert = arr.toLowerCase().split(' ');
+        result = convert.map(function (vla) {
+            return vla.replace(vla.charAt(0), vla.charAt(0).toUpperCase());
+        });
+        return result.join(' ');
+    }
+
+    document.write(display(arr)+"<br>");
+    display(arr);
+
+    function longestWord(arr) {
+        arr1 = arr.split(' ');
+      let  maxlength = 0
+        let arr3;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i].length > maxlength) {
+                maxlength = arr1[i].length;
+                arr3 = arr1[i];
+            }
+        }
+        return arr3;
+    }
+
+    document.write("1 tu dai nhat trong xau do la  " + longestWord(arr));
+    longestWord(arr);
+</script>
+</body>
+</html>

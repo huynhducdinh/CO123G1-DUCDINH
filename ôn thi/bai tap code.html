@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>code</title>
+</head>
+<body>
+<h2 style="color: #3366CC">Xây dựng quản lý hệ thống học viên </h2>
+<h2 style="color: #FF6666">CODEGYM</h2>
+<div>
+    <form>
+        <button style="color: #FF9966" type="button" onclick="AddNew()">Thêm mới học viên</button>
+
+    </form>
+</div>
+<hr>
+<p id="disphay"></p>
+
+<script>
+    class Manage {
+        constructor(codestudent, name, classes, email, birth, module) {
+            this.codestudent = codestudent;
+            this.name = name;
+            this.classes = classes;
+            this.email = email;
+            this.birth = birth;
+            this.module = module;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getCodestudent() {
+            return this.codestudent;
+        }
+
+        setCodestudent(codestudent) {
+            this.codestudent = codestudent;
+        }
+
+        getClasses() {
+            return this.classes;
+        }
+
+        setClasses(classes) {
+            this.classes = classes;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+
+        getBirth() {
+            return this.birth;
+        }
+
+        setBirth(birth) {
+            this.birth = birth;
+        }
+
+        getModule() {
+            return this.module;
+        }
+
+        setModule(module) {
+            this.module = module;
+        }
+    }
+
+    // constructor(codestudent, name, classes, email, birth,module) {
+    let manage = new Manage("HV-0001", "Huỳnh Đức Định", "C0123G1", "heeyeon0982002@gmail.com", "09-08-2002", "01");
+    let arr = [manage];
+    display(arr);
+
+    function display(arr) {
+        let table = "<table border='1px' style='border-collapse: collapse'>"
+        table += "<tr>" +
+            "<th>Mã học viên</th>" +
+            "<th>Tên học viên</th>" +
+            "<th>Lớp</th>" +
+            "<th>Email</th>" +
+            "<th>Ngày sinh</th>" +
+            "<th>Module</th>" +
+            "<th colspan='2'>Thao tác</th>" +
+            "</tr>"
+        for (let i = 0; i < arr.length; i++) {
+            table += "<tr>" +
+                "<td>" + arr[i].getCodestudent() + "</td>" +
+                "<td>" + arr[i].getName() + "</td>" +
+                "<td>" + arr[i].getClasses() + "</td>" +
+                "<td>" + arr[i].getEmail() + "</td>" +
+                "<td>" + arr[i].getBirth() + "</td>" +
+                "<td>" + arr[i].getModule() + "</td>" +
+                "<td>"+"<button type='button' onclick='updatee("+i+")'>Sửa</button>"+"</td>"+
+                "<td>"+"<button type='button' onclick='deletee("+i+")'>Xóa</button>"+"</td>"+
+                "</tr>"
+        }
+        table += "</table>"
+        document.getElementById("disphay").innerHTML = table;
+
+    }
+
+    function AddNew() {
+        let code = prompt("Bạn hãy nhập Mã học viên vào đây");
+        let name = prompt("Bạn hãy nhập tên vào đây");
+        let clas = prompt("Bạn hãy nhập lớp vào đây");
+        let email = prompt("Bạn hãy nhập email vào đây");
+        let dirth = prompt("bạn hãy nhập ngày tháng năm sinh vào đây");
+        let module = prompt("Bạn hãy nhập module vào đây");
+        let managee = new Manage(code, name, clas, email, dirth, module);
+        arr.push(managee);
+        alert("Xin chúc mừng bạn đã thêm mới thành công");
+        display(arr);
+    }
+
+    function deletee(id) {
+        const deletee = confirm("Bạn có muốn xóa tài khoảng " + " " + arr[id].getName() +" "+"này không ?")
+        if (deletee){
+            arr.splice(id,1);
+            alert("Bạn đã xóa thành công");
+            display(arr);
+        }else {
+            alert("Bạn đã không xóa");
+
+        }
+    }
+    function updatee(id) {
+        let code = prompt("Bạn hãy nhập Mã học viên vào đây");
+        let name = prompt("Bạn hãy nhập tên vào đây");
+        let clas = prompt("Bạn hãy nhập lớp vào đây");
+        let email = prompt("Bạn hãy nhập email vào đây");
+        let dirth = prompt("bạn hãy nhập ngày tháng năm sinh vào đây");
+        let module = prompt("Bạn hãy nhập module vào đây");
+        arr[id] = new Manage(code, name, clas, email, dirth, module);
+        alert("Xin chúc mừng bạn đã undatee mới thành công");
+        display(arr);
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhap 1 mang vaof day");
+    let newArr=[];
+    let flag;
+    for (let i = 0; i < str.length; i++) {
+         flag = true;
+        for (let j = 0; j <newArr.length ; j++) {
+            if (str[i]==newArr[j]){
+                flag=false;
+            }
+        }
+        if (flag){
+            newArr.push(str[i]);
+        }
+    }
+document.write("cac ky tu trong mang la :  "+str+"<br>")
+    document.write( "cac ky tu khac nhau trong mang la  "+newArr+ "<br>"+"   Co :  "+newArr.length+" so khac nhau")
+</script>
+</body>
+</html>

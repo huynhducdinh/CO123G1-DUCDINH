@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let n = prompt("nhạp độ dài của mảng A");
+    let n1 = prompt("nhập độ dài của mảng B");
+    let arr = [];
+    let arr1 = [];
+    let arr2 = [];
+    for (let i = 0; i <n ; i++) {
+        arr[i]= +prompt("nhập i vào "+(i+1)+ "mảng A");
+    }
+    for (let i = 0; i <n1 ; i++) {
+        arr1[i] = +prompt("nhập i vào "+(i+1)+ "mảng B");
+    }
+    for (let i = 0; i <n1 ; i++) {
+        if (arr.indexOf(arr1[i])===-1);{
+            arr2.push(arr1[i]);
+        }
+    }
+    document.write("missingValue(A, B)=[" +arr2+"]");
+</script>
+</body>
+</html>
