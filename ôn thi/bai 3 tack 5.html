@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ba i3</title>
+</head>
+<body>
+<script>
+
+    let m = +prompt("nhap M vao daya ");
+    let n = +prompt("nhapj N vao day ");
+
+
+    let arr = [];
+    let arr1 = [];
+
+    for (let i = 0; i < m; i++) {
+        arr[i] = +prompt("nhạp phàan tử  " + (i + 1) + "của mảng 1");
+    }
+    for (let i = 0; i < n; i++) {
+        arr1[i] = +prompt("nhạp phàan tử  " + (i + 1) + "của mảng 2");
+    }
+    let arr3 = [arr,arr1];
+    let max=arr3[0][0];
+    let min=arr3[0][0];
+    for (let i = 0; i <arr3.length ; i++) {
+        for (let j = 0; j <arr3[i].length ; j++) {
+            if (max < arr3[i][j]) {
+                max = arr3[i][j];
+            }
+            if (min > arr3[i][j]) {
+                min = arr3[i][j];
+            }
+        }
+    }
+    document.write("gia tri lon nhat trong"+arr3 +"la:" +max +"<br>");
+    document.write("gia tri nho nhat trong"+arr3 +"la:"   +min);
+</script>
+</body>
+</html>

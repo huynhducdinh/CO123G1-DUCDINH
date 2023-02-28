@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt("nhap M vao daya ");
+    let n = +prompt("nhapj N vao day ");
+
+    let sum = 0;
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i]=[];
+        for (let j = 0; j < m; j++) {
+            arr[i][j] = +prompt("nhap  i va j vao dayy");
+            if (arr[i][j] % 2 === 0) {
+                sum= sum + arr[i][j];
+            }
+        }
+    }
+    document.write("cac phan tu cos trong mang  " +arr+"<br>")
+    document.write(" tong cac phan tu chan la  "+sum);
+
+</script>
+</body>
+</html>

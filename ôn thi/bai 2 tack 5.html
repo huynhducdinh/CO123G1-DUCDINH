@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let m = +prompt("nhap M vao daya ");
+    let n = +prompt("nhapj N vao day ");
+    let arr3 = [];
+    let newArr = [];
+    for (let i = 0; i < m; i++) {
+        arr3[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr3[i][j] = +prompt("nhạp phàan tử i va j vao day ");
+            let sum = 0;
+            for (let k = 1; k < arr3[i][j]; k++) {
+                if (arr3[i][j] % k == 0) {
+                    sum++;
+                }
+            }
+            if (sum < 2 && arr3[i][j] > 1) {
+                newArr.push(arr3[i][j]);
+            }
+        }
+
+    }
+    document.write("cac phan tu  " + arr3+"<br>");
+    document.write(" cac so nguyen to la  " + newArr + "<br>" + "do dai cua cac so nguyen to  " + newArr.length);
+
+
+</script>
+</body>
+</html>
