@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,17 +9,25 @@
     let n = prompt("nhập có sô vào dây");
     let arr = [];
     let sum = 0;
+    let agv ;
+    let count =0
+    let arr1=[]
     for (let i = 0; i < n; i++) {
-        arr[i] = +prompt(" nhập phần tử i vào mảng");
+        arr[i] = +prompt(" nhập phần tử i vào mảng"+i);
 
     }
-    document.write("mảng dc them mới là" + arr);
+    document.write("mảng dc them mới là" + arr +"<br>");
     for (let i = 0; i < n; i++) {
         if (arr[i] % 2 === 0 && i % 2 !== 0) {
+            count ++
+            arr1.push(arr[i])
             sum = sum + arr[i];
         }
     }
-    document.write(" tỏng các phân tử chăn ở vĩ trí le là:" + sum);
+    agv =sum/count;
+    document.write("cac phan tu chan là   " + arr1 +"<br>")
+    document.write(" tỏng các phân tử chăn ở vĩ trí le là   :" + sum+"<br>");
+    document.write("tbcong  :"+agv);
 </script>
 </body>
 </html>

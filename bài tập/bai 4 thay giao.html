@@ -2,31 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai 3</title>
+    <title>so nguyen to</title>
 </head>
 <body>
 <script>
-    let n = prompt("nhạp so vao đây");
-    let arr = [];
-    let sum = 0;
-    for (let i = 0; i < n; i++) {
-        arr[i] = +prompt("nhập phần tử i vào đây");
-    }
-    document.write("các phần tử trong mảng là" + arr+"<br>");
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== arr[arr.length - i - 1]) {
-            document.write("Khong đối xứng");
-            break;
+    function check(a) {
+        let check = true
+        if (a <= 1) {
+            check = false
         } else {
-            sum++
+            for (i = 2; i <= Math.sqrt(a); i++) {
+                if (a % i == 0) {
+                    check = false
+                    break
+                }
+            }
         }
+        return check
     }
-    if (sum === arr.length ) {
-        document.write("đối xứng")
+    function Prime(a) {
+        let prime = [];
+        for (let i = 0; i < a.length; i++) {
+            if (check(a[i]) == true) prime.push(a[i])
 
+        }
+        return prime
     }
 
-
+    let n = parseInt(prompt('nhập số phần tử mảng'));
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt('nhập vào phần tử thứ i'));
+    }
+    let a = Prime(arr);
+    a.sort(function (a, b) {
+        return (a - b)
+    })
+    document.write(a)
 </script>
 </body>
 </html>
